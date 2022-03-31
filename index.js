@@ -1,14 +1,18 @@
 const compute = (input) => {
     const number = parseFloat(input);
     let res = '';
-    
-    if (number % 3 === 0) {
-        res+= 'Foo';
-    }
 
-    if (number % 5 === 0) {
-        res+= 'Bar';
-    }
+    const equivalences = [
+        {number :3, label: 'Foo'},
+        {number :5, label: 'Bar'},
+        {number :7, label: 'Qix'}
+    ];
+
+    equivalences.forEach(equivalence => {
+        if (number % equivalence.number === 0) {
+            res += equivalence.label;
+        }
+    });
     
     if (!res) {
         return input

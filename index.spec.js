@@ -48,4 +48,16 @@ describe("Basic test", () => {
     // Assert
     expect(result).toEqual(output);
   });
+
+  it("should return 'Qix' when given a number divisible by 7", () => {
+    // Arrange
+    const input = "7";
+    const output = "Qix";
+
+    // Act
+    const result = compute(input);
+
+    // Assert
+    expect(result).toEqual(output);
+  });
 });
