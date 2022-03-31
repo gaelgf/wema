@@ -1,3 +1,9 @@
+const equivalences = [
+    {number :3, label: 'Foo'},
+    {number :5, label: 'Bar'},
+    {number :7, label: 'Qix'}
+];
+
 const compute = (input) => {
     const number = parseFloat(input);
     let res = '';
@@ -15,11 +21,6 @@ const compute = (input) => {
 
 const getDivisibleEquivalence = (number) => {
     let res = '';
-    const equivalences = [
-        {number :3, label: 'Foo'},
-        {number :5, label: 'Bar'},
-        {number :7, label: 'Qix'}
-    ];
 
     equivalences.forEach(equivalence => {
         if (number % equivalence.number === 0) {
@@ -31,14 +32,8 @@ const getDivisibleEquivalence = (number) => {
 };
 
 const getReplacedEquivalence = (input, res) => {
-    const equivalences = [
-        {number :/3/g, label: 'Foo'},
-        {number :/5/g, label: 'Bar'},
-        {number :/7/g, label: 'Qix'}
-    ];
-
     equivalences.forEach(equivalence => {
-        const founded = input.match(equivalence.number) || []
+        const founded = input.match(new RegExp(equivalence.number, 'g')) || []
         founded.forEach(item => {
             res += equivalence.label;
         });
