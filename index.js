@@ -8,7 +8,7 @@ const compute = (input) => {
     const number = parseFloat(input);
     let res = '';
 
-    res = getDivisibleEquivalence(number);
+    res = getDivisibleEquivalence(number, res);
 
     res = getReplacedEquivalence(input, res);
     
@@ -19,9 +19,7 @@ const compute = (input) => {
     return res;
 }
 
-const getDivisibleEquivalence = (number) => {
-    let res = '';
-
+const getDivisibleEquivalence = (number, res) => {
     equivalences.forEach(equivalence => {
         if (number % equivalence.number === 0) {
             res += equivalence.label;
