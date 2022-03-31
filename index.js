@@ -8,7 +8,9 @@ const compute = (input) => {
     const number = parseFloat(input);
     let res = '';
 
-    res = getDivisibleEquivalence(number, res);
+    if (!isNaN(number)) {
+        res = getDivisibleEquivalence(number, res);
+    }
 
     res = getReplacedEquivalence(input, res);
     

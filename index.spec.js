@@ -60,4 +60,28 @@ describe("Basic test", () => {
     // Assert
     expect(result).toEqual(output);
   });
+
+    it("should return 'Foo' when given 'toto3titi' ", () => {
+    // Arrange
+    const input = "toto3titi";
+    const output = "Foo";
+
+    // Act
+    const result = compute(input);
+
+    // Assert
+    expect(result).toEqual(output);
+    });
+  
+    it("should return '' when given '' ", () => {
+    // Arrange
+    const input = "";
+    const output = "";
+
+    // Act
+    const result = compute(input);
+
+    // Assert
+    expect(result).toEqual(output);
+  });
 });
