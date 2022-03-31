@@ -73,7 +73,7 @@ describe("Basic test", () => {
     expect(result).toEqual(output);
     });
   
-    it("should return '' when given '' ", () => {
+    it("should return empty string when given an empty string", () => {
     // Arrange
     const input = "";
     const output = "";
