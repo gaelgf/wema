@@ -25,10 +25,10 @@ describe("Basic test", () => {
     expect(result).toEqual(output);
   });
 
-  it("should return 'Foo' when given a number divisible by 3", () => {
+  it("should return 'FooFoo' when given 3", () => {
     // Arrange
     const input = "3";
-    const output = "Foo";
+    const output = "FooFoo";
 
     // Act
     const result = compute(input);
@@ -37,10 +37,10 @@ describe("Basic test", () => {
     expect(result).toEqual(output);
   });
 
-  it("should return 'Bar' when given a number divisible by 5", () => {
+  it("should return 'BarBar' when given 5", () => {
     // Arrange
     const input = "5";
-    const output = "Bar";
+    const output = "BarBar";
 
     // Act
     const result = compute(input);
@@ -49,10 +49,10 @@ describe("Basic test", () => {
     expect(result).toEqual(output);
   });
 
-  it("should return 'Qix' when given a number divisible by 7", () => {
+  it("should return 'QixQix' when given 7", () => {
     // Arrange
     const input = "7";
-    const output = "Qix";
+    const output = "QixQix";
 
     // Act
     const result = compute(input);
