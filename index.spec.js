@@ -1,10 +1,34 @@
 const compute = require("./index");
 
 describe("Basic test", () => {
-  it("should do something when having some inputs", () => {
+  it("should return 1 when given 1", () => {
     // Arrange
     const input = "1";
     const output = "1";
+
+    // Act
+    const result = compute(input);
+
+    // Assert
+    expect(result).toEqual(output);
+  });
+
+  it("should return 2 when given 2", () => {
+    // Arrange
+    const input = "2";
+    const output = "2";
+
+    // Act
+    const result = compute(input);
+
+    // Assert
+    expect(result).toEqual(output);
+  });
+
+    it("should return 'Foo' when given a number divisible by 3", () => {
+    // Arrange
+    const input = "3";
+    const output = "Foo";
 
     // Act
     const result = compute(input);
